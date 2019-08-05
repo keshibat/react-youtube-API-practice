@@ -2,14 +2,16 @@ import React from 'react'
 import VideoItem from './VideoItem'
 
 
-const VideoList = ({ videos }) => {
 
-  const renderdList = videos.map(() => {
-    return <VideoItem />;
+
+const VideoList = ({videos}) => {
+
+  const renderedList = videos.map(video => {
+    return <VideoItem  video={video} />
   });
 
   return (
-    <div>{renderdList}</div>
+    <div>{renderedList}</div>
   )
 }
 
