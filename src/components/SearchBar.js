@@ -8,14 +8,9 @@ class SearchBar extends React.Component {
     this.setState({term: event.target.value})
   }
 
-  onFormSubmit = (event) => {
+  onFormSubmit = event => {
     event.preventDefault();
-
     this.props.onFormSubmit(this.state.term);
-
-    //Make sure we call
-    //callback from parent component
-
   }
 
 
@@ -31,9 +26,6 @@ class SearchBar extends React.Component {
             />
           </div>
         </form>
-
-
-
       </div>
     )
   }
